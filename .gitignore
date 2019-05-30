@@ -1,0 +1,45 @@
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Secrets
+keystore.properties
+
+# Gradle generated files
+.gradle/
+
+# Android Studio 
+/build
+/fastscout/release/
+/captures
+
+# Crashlytics
+/fastscout/src/main/assets/crashlytics-build.properties
+/fastscout/src/main/res/values/com_crashlytics_export_strings.xml
+
+# User-specific configurations
+.idea/libraries/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/kotlinc.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/sonarlint/
+.idea/vcs.xml
+.idea/caches/build_file_checksums.ser
+.idea/sonarlint/
+.idea/markdown-navigator.xml
+.idea/markdown-exported-files.xml
+.idea/markdown-navigator/
+.idea/dbnavigator.xml
+*.iml
+*.exec
+*.ec
+
+# OS-specific files
+.DS_Store
+.externalNativeBuild
