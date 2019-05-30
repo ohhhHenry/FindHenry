@@ -66,7 +66,7 @@ class MainFragment : Fragment() {
         } else {
             getBleScanningObservable()
                 .observeOn(AndroidSchedulers.mainThread())
-                .doFinally { dispose("BleScanningObservable") }
+                .doFinally { dispose() }
                 .subscribe(
                     {
                         Log.i(
@@ -96,8 +96,8 @@ class MainFragment : Fragment() {
         return rxBleClient.scanBleDevices(scanSettings, scanFilter)
     }
 
-    private fun dispose(caller: String) {
-        Log.i("MainFragment.Lifecycle", "onDispose() called from $caller")
+    private fun dispose() {
+        Log.i("MainFragment.Lifecycle", "dispose() called")
         scanDisposable = null
         updateButtonUIState()
     }
