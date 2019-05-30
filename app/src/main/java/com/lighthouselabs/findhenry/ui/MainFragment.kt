@@ -8,13 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.lighthouselabs.findhenry.R
+import com.polidea.rxandroidble2.RxBleClient
+import org.koin.android.ext.android.inject
 
 class MainFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = MainFragment()
-    }
-
+    val rxBleClient: RxBleClient by inject()
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -26,4 +25,7 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
     }
 
+    companion object {
+        fun newInstance() = MainFragment()
+    }
 }
